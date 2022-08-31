@@ -7,8 +7,6 @@ library(forcats)
 df_m <- group_by(flights, carrier) %>%
   mutate(n_vuelos = n()) %>%
   filter(n_vuelos >= 1000) %>% 
-  #En lugar de distancia podriamos poner horas, probe con menos de 6 horas y aparece FL cumpliendo
-  #los otros requisitos tambien. 
   ungroup()
 
 #-----------------------SELECCION EMPRESA CHICA INICIO----------------------------#
